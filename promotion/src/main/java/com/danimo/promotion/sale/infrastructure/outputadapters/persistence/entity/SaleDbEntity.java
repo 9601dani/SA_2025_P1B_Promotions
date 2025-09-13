@@ -21,8 +21,9 @@ import java.util.UUID;
 @AllArgsConstructor
 public class SaleDbEntity {
     @Id
+    @Column(columnDefinition = "CHAR(36)")
     private UUID id;
-    @Column
+    @Column(columnDefinition = "CHAR(36)")
     private UUID locationId;
 
     @Column
@@ -34,7 +35,7 @@ public class SaleDbEntity {
     @Column
     private BigDecimal discountPercentage;
 
-    @Column
+    @Column(columnDefinition = "CHAR(36)")
     private UUID itemId;
 
     @Enumerated(EnumType.STRING)
