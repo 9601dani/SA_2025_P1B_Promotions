@@ -5,6 +5,10 @@ pipeline {
         maven 'Maven'
     }
 
+    environment {
+        JAVA_HOME = '/usr/lib/jvm/java-21-openjdk-amd64'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -13,18 +17,39 @@ pipeline {
             }
         }
 
-        stage('Prueba de Maven') {
+        stage('Build & Test') {
             steps {
-                echo "Verificando instalación de Maven..."
-                sh 'mvn --version'
+                dir('promotion'){
+                    sh './mvnw clean install'
+                }
             }
         }
 
-        stage('Prueba de conexión') {
+        stage('Verify Jacoco Exec') {
             steps {
-                echo "Jenkins se conectó a GitHub y Maven está funcionando."
-                sh 'ls -la'
+                dir('promotion/target') {
+                    sh 'ls -l'
+                }
             }
+        }
+    }
+
+    post {
+        success {
+            script {
+                jacoco (
+                    execPattern: '**/target/*.exec',
+                    classPattern: '**/target/classes',
+                    sourcePattern: '**/src/main/java',
+                    changeBuildStatus: true,
+                    minimumLineCoverage: '50'
+                )
+            }
+            echo 'Build y cobertura completados con éxito'
+        }
+
+        failure {
+            echo 'Build o tests fallaron'
         }
     }
 }
