@@ -1,6 +1,6 @@
 package com.danimo.promotion.sale.infrastructure.outputadapters.rest;
 
-import com.danimo.promotion.sale.application.outputadapters.rest.ExistItemOutputPort;
+import com.danimo.promotion.sale.application.rest.ExistItemOutputPort;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;

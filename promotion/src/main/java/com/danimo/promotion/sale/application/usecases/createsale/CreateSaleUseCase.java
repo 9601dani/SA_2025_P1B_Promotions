@@ -3,16 +3,15 @@ package com.danimo.promotion.sale.application.usecases.createsale;
 import com.danimo.promotion.common.application.annotations.UseCase;
 import com.danimo.promotion.common.application.exceptions.EntityAlreadyExistException;
 import com.danimo.promotion.sale.application.inputadapters.CreateSaleInputPort;
-import com.danimo.promotion.sale.application.outputadapters.persistence.FindingSaleByCodeOutputPort;
-import com.danimo.promotion.sale.application.outputadapters.persistence.StoringSaleOutputPort;
-import com.danimo.promotion.sale.application.outputadapters.rest.ExistItemOutputPort;
-import com.danimo.promotion.sale.application.outputadapters.rest.ExistLocationOutputPort;
+import com.danimo.promotion.sale.application.persistence.FindingSaleByCodeOutputPort;
+import com.danimo.promotion.sale.application.persistence.StoringSaleOutputPort;
+import com.danimo.promotion.sale.application.rest.ExistItemOutputPort;
+import com.danimo.promotion.sale.application.rest.ExistLocationOutputPort;
 import com.danimo.promotion.sale.domain.Sale;
 import com.danimo.promotion.sale.domain.SaleStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @UseCase

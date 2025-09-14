@@ -2,7 +2,7 @@ package com.danimo.promotion.sale.application.usecases.findbylocation;
 
 import com.danimo.promotion.common.application.annotations.UseCase;
 import com.danimo.promotion.sale.application.inputadapters.FindSaleByLocationIdInputPort;
-import com.danimo.promotion.sale.application.outputadapters.persistence.FindingSaleByLocationOutputPort;
+import com.danimo.promotion.sale.application.persistence.FindingSaleByLocationOutputPort;
 import com.danimo.promotion.sale.domain.Sale;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -5,8 +5,8 @@ spring:
   application:
     name: promotions
   datasource:
-    url: ${DB_URL_USER}
-    username: ${DB_USERNAME_USER}
+    url: ${DB_URL_PROMOTION}
+    username: ${DB_USERNAME_CLIENT}
     password: ${DB_PASSWORD_USER}
     driver-class-name: org.mariadb.jdbc.Driver
     hikari:

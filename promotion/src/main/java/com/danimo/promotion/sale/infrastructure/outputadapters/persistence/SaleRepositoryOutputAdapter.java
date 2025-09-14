@@ -1,10 +1,10 @@
 package com.danimo.promotion.sale.infrastructure.outputadapters.persistence;
 
 import com.danimo.promotion.common.infrastructure.annotations.PersistenceAdapter;
-import com.danimo.promotion.sale.application.outputadapters.persistence.FindingSaleByCodeOutputPort;
-import com.danimo.promotion.sale.application.outputadapters.persistence.FindingSaleByIdOutputPort;
-import com.danimo.promotion.sale.application.outputadapters.persistence.FindingSaleByLocationOutputPort;
-import com.danimo.promotion.sale.application.outputadapters.persistence.StoringSaleOutputPort;
+import com.danimo.promotion.sale.application.persistence.FindingSaleByCodeOutputPort;
+import com.danimo.promotion.sale.application.persistence.FindingSaleByIdOutputPort;
+import com.danimo.promotion.sale.application.persistence.FindingSaleByLocationOutputPort;
+import com.danimo.promotion.sale.application.persistence.StoringSaleOutputPort;
 import com.danimo.promotion.sale.domain.Sale;
 import com.danimo.promotion.sale.infrastructure.outputadapters.persistence.entity.SaleDbEntity;
 import com.danimo.promotion.sale.infrastructure.outputadapters.persistence.entity.mapper.SalePersistenceMapper;

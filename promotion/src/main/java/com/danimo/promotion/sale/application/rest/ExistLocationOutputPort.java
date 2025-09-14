@@ -1,4 +1,4 @@
-package com.danimo.promotion.sale.application.outputadapters.rest;
+package com.danimo.promotion.sale.application.rest;
 
 import java.util.UUID;
 

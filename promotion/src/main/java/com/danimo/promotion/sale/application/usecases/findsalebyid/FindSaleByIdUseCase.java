@@ -3,10 +3,9 @@ package com.danimo.promotion.sale.application.usecases.findsalebyid;
 import com.danimo.promotion.common.application.annotations.UseCase;
 import com.danimo.promotion.common.application.exceptions.EntityNotFoundException;
 import com.danimo.promotion.sale.application.inputadapters.FindSaleByIdInputPort;
-import com.danimo.promotion.sale.application.outputadapters.persistence.FindingSaleByIdOutputPort;
+import com.danimo.promotion.sale.application.persistence.FindingSaleByIdOutputPort;
 import com.danimo.promotion.sale.domain.Sale;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
 
 import java.util.UUID;
 
